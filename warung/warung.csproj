@@ -8,10 +8,26 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>warung</RootNamespace>
     <AssemblyName>warung</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +49,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -67,17 +90,17 @@
     <Compile Include="Form_Admin.Designer.cs">
       <DependentUpon>Form_Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Pegawai.cs">
+    <Compile Include="KelolaMakanan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Pegawai.Designer.cs">
-      <DependentUpon>Form_Pegawai.cs</DependentUpon>
+    <Compile Include="KelolaMakanan.Designer.cs">
+      <DependentUpon>KelolaMakanan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Pengguna.cs">
+    <Compile Include="Form_Kasir.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Pengguna.Designer.cs">
-      <DependentUpon>Form_Pengguna.cs</DependentUpon>
+    <Compile Include="Form_Kasir.Designer.cs">
+      <DependentUpon>Form_Kasir.cs</DependentUpon>
     </Compile>
     <Compile Include="historitransaksi.cs">
       <SubType>Form</SubType>
@@ -85,25 +108,54 @@
     <Compile Include="historitransaksi.Designer.cs">
       <DependentUpon>historitransaksi.cs</DependentUpon>
     </Compile>
+    <Compile Include="KelolaAktifitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KelolaAktifitas.Designer.cs">
+      <DependentUpon>KelolaAktifitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KelolaPengguna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KelolaPengguna.Designer.cs">
+      <DependentUpon>KelolaPengguna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LaporanTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaporanTransaksi.Designer.cs">
+      <DependentUpon>LaporanTransaksi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pengguna.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pengguna.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Admin.resx">
       <DependentUpon>Form_Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Pegawai.resx">
-      <DependentUpon>Form_Pegawai.cs</DependentUpon>
+    <EmbeddedResource Include="KelolaMakanan.resx">
+      <DependentUpon>KelolaMakanan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Pengguna.resx">
-      <DependentUpon>Form_Pengguna.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Kasir.resx">
+      <DependentUpon>Form_Kasir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="historitransaksi.resx">
       <DependentUpon>historitransaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KelolaPengguna.resx">
+      <DependentUpon>KelolaPengguna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaporanTransaksi.resx">
+      <DependentUpon>LaporanTransaksi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -116,7 +168,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
@@ -150,6 +204,18 @@
     <None Include="DataSet_Menu.xss">
       <DependentUpon>DataSet_Menu.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
+    <None Include="Pengguna.xsc">
+      <DependentUpon>Pengguna.xsd</DependentUpon>
+    </None>
+    <None Include="Pengguna.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pengguna.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Pengguna.xss">
+      <DependentUpon>Pengguna.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -162,6 +228,31 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsrc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

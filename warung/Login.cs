@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-
 using System.Windows.Forms;
 
 namespace warung
@@ -39,26 +38,32 @@ namespace warung
                     // Jika cocok maka arahkan ke halaman sesuai role yang ditentukan
                     if (dt.Rows.Count > 0)
                     {
+                        temp.user = userid.Text;
                         // Disini kalau aku lupa, dr itu ngambil value dari dt.Rows dan TipeData dia yaitu DataRow
                         foreach (DataRow dr in dt.Rows)
                         {
+
                             if (dr["role"].ToString() == "Admin")
                             {
                                 this.Hide();
+
                                 Form_Admin fa = new Form_Admin();
                                 fa.Show();
-                            }
-                            else if (dr["role"].ToString() == "Pengguna")
-                            {
-                                this.Hide();
-                                Form_Pengguna fp = new Form_Pengguna();
-                                fp.Show();
+                                temp.catatlog(temp.user, "Login");
                             }
                             else if (dr["role"].ToString() == "Pegawai")
                             {
                                 this.Hide();
-                                Form_Pegawai f = new Form_Pegawai();
+                                Form_Kasir fp = new Form_Kasir();
+                                fp.Show();
+                                temp.catatlog(temp.user, "Login");
+                            }
+                            else if (dr["role"].ToString() == "Manajer")
+                            {
+                                this.Hide();
+                                KelolaMakanan f = new KelolaMakanan();
                                 f.Show();
+                                temp.catatlog(temp.user, "Login");
                             }
                         }
                     }
@@ -80,5 +85,27 @@ namespace warung
         {
 
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

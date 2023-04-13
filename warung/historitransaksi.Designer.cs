@@ -30,20 +30,76 @@ namespace warung
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataSet2 = new warung.DataSet2();
             this.transaksiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet2 = new warung.DataSet2();
             this.transaksiTableAdapter = new warung.DataSet2TableAdapters.transaksiTableAdapter();
-            this.kodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jumlahDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tanggalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalhargaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
+            this.tanggalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jumlahDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.transaksiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // transaksiBindingSource
+            // 
+            this.transaksiBindingSource.DataMember = "transaksi";
+            this.transaksiBindingSource.DataSource = this.dataSet2;
+            // 
+            // dataSet2
+            // 
+            this.dataSet2.DataSetName = "DataSet2";
+            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // transaksiTableAdapter
+            // 
+            this.transaksiTableAdapter.ClearBeforeFill = true;
+            // 
+            // totalhargaDataGridViewTextBoxColumn
+            // 
+            this.totalhargaDataGridViewTextBoxColumn.DataPropertyName = "total_harga";
+            this.totalhargaDataGridViewTextBoxColumn.HeaderText = "total_harga";
+            this.totalhargaDataGridViewTextBoxColumn.Name = "totalhargaDataGridViewTextBoxColumn";
+            this.totalhargaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tanggalDataGridViewTextBoxColumn
+            // 
+            this.tanggalDataGridViewTextBoxColumn.DataPropertyName = "tanggal";
+            this.tanggalDataGridViewTextBoxColumn.HeaderText = "tanggal";
+            this.tanggalDataGridViewTextBoxColumn.Name = "tanggalDataGridViewTextBoxColumn";
+            this.tanggalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // jumlahDataGridViewTextBoxColumn
+            // 
+            this.jumlahDataGridViewTextBoxColumn.DataPropertyName = "jumlah";
+            this.jumlahDataGridViewTextBoxColumn.HeaderText = "jumlah";
+            this.jumlahDataGridViewTextBoxColumn.Name = "jumlahDataGridViewTextBoxColumn";
+            this.jumlahDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // namaDataGridViewTextBoxColumn
+            // 
+            this.namaDataGridViewTextBoxColumn.DataPropertyName = "nama";
+            this.namaDataGridViewTextBoxColumn.HeaderText = "nama";
+            this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
+            this.namaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kodeDataGridViewTextBoxColumn
+            // 
+            this.kodeDataGridViewTextBoxColumn.DataPropertyName = "kode";
+            this.kodeDataGridViewTextBoxColumn.HeaderText = "kode";
+            this.kodeDataGridViewTextBoxColumn.Name = "kodeDataGridViewTextBoxColumn";
+            this.kodeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dataGridView1
             // 
@@ -65,62 +121,6 @@ namespace warung
             this.dataGridView1.Size = new System.Drawing.Size(660, 150);
             this.dataGridView1.TabIndex = 0;
             // 
-            // dataSet2
-            // 
-            this.dataSet2.DataSetName = "DataSet2";
-            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // transaksiBindingSource
-            // 
-            this.transaksiBindingSource.DataMember = "transaksi";
-            this.transaksiBindingSource.DataSource = this.dataSet2;
-            // 
-            // transaksiTableAdapter
-            // 
-            this.transaksiTableAdapter.ClearBeforeFill = true;
-            // 
-            // kodeDataGridViewTextBoxColumn
-            // 
-            this.kodeDataGridViewTextBoxColumn.DataPropertyName = "kode";
-            this.kodeDataGridViewTextBoxColumn.HeaderText = "kode";
-            this.kodeDataGridViewTextBoxColumn.Name = "kodeDataGridViewTextBoxColumn";
-            this.kodeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // namaDataGridViewTextBoxColumn
-            // 
-            this.namaDataGridViewTextBoxColumn.DataPropertyName = "nama";
-            this.namaDataGridViewTextBoxColumn.HeaderText = "nama";
-            this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
-            this.namaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // jumlahDataGridViewTextBoxColumn
-            // 
-            this.jumlahDataGridViewTextBoxColumn.DataPropertyName = "jumlah";
-            this.jumlahDataGridViewTextBoxColumn.HeaderText = "jumlah";
-            this.jumlahDataGridViewTextBoxColumn.Name = "jumlahDataGridViewTextBoxColumn";
-            this.jumlahDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tanggalDataGridViewTextBoxColumn
-            // 
-            this.tanggalDataGridViewTextBoxColumn.DataPropertyName = "tanggal";
-            this.tanggalDataGridViewTextBoxColumn.HeaderText = "tanggal";
-            this.tanggalDataGridViewTextBoxColumn.Name = "tanggalDataGridViewTextBoxColumn";
-            this.tanggalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // totalhargaDataGridViewTextBoxColumn
-            // 
-            this.totalhargaDataGridViewTextBoxColumn.DataPropertyName = "total_harga";
-            this.totalhargaDataGridViewTextBoxColumn.HeaderText = "total_harga";
-            this.totalhargaDataGridViewTextBoxColumn.Name = "totalhargaDataGridViewTextBoxColumn";
-            this.totalhargaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // historitransaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,25 +129,25 @@ namespace warung
             this.Controls.Add(this.dataGridView1);
             this.Name = "historitransaksi";
             this.Text = "historitransaksi";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.historitransaksi_FormClosing);
             this.Load += new System.EventHandler(this.historitransaksi_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.transaksiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private DataSet2 dataSet2;
         private System.Windows.Forms.BindingSource transaksiBindingSource;
         private DataSet2TableAdapters.transaksiTableAdapter transaksiTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jumlahDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tanggalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalhargaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tanggalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jumlahDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

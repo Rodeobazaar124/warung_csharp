@@ -23,5 +23,14 @@ namespace warung
             this.transaksiTableAdapter.Fill(this.dataSet2.transaksi);
 
         }
+
+        private void historitransaksi_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                temp.catatlog(temp.user, "Logout");
+                Application.Exit();
+            }
+        }
     }
 }

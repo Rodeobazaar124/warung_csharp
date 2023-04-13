@@ -1,0 +1,17 @@
+C:\Users\azfasa15\source\repos\warung\warung\bin\Release\warung.exe.config
+C:\Users\azfasa15\source\repos\warung\warung\bin\Release\warung.exe
+C:\Users\azfasa15\source\repos\warung\warung\bin\Release\warung.pdb
+C:\Users\azfasa15\source\repos\warung\warung\obj\Release\warung.Form_Admin.resources
+C:\Users\azfasa15\source\repos\warung\warung\obj\Release\warung.Form_Pegawai.resources
+C:\Users\azfasa15\source\repos\warung\warung\obj\Release\warung.Form_Pengguna.resources
+C:\Users\azfasa15\source\repos\warung\warung\obj\Release\warung.historitransaksi.resources
+C:\Users\azfasa15\source\repos\warung\warung\obj\Release\warung.LaporanTransaksi.resources
+C:\Users\azfasa15\source\repos\warung\warung\obj\Release\warung.Login.resources
+C:\Users\azfasa15\source\repos\warung\warung\obj\Release\warung.Properties.Resources.resources
+C:\Users\azfasa15\source\repos\warung\warung\obj\Release\warung.csproj.GenerateResource.Cache
+C:\Users\azfasa15\source\repos\warung\warung\obj\Release\RdlCompile.cache
+C:\Users\azfasa15\source\repos\warung\warung\obj\Release\RdlCompile.compiled
+C:\Users\azfasa15\source\repos\warung\warung\obj\Release\warung.exe
+C:\Users\azfasa15\source\repos\warung\warung\obj\Release\warung.pdb
+C:\Users\azfasa15\source\repos\warung\warung\obj\Release\warung.csprojResolveAssemblyReference.cache
+C:\Users\azfasa15\source\repos\warung\warung\obj\Release\warung.KelolaPengguna.resources
